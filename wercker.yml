@@ -63,17 +63,6 @@ deploy:
    - internal/docker-push:
        username: $DOCKER_USERNAME
        password: $DOCKER_PASSWORD
-       cmd: /pipeline/source/hello
-       port: "8080"
        tag: latest
        repository: mrbluedot/pipeline
        registry: https://registry.hub.docker.com
-
-   - cng/cf-deploy:
-       api: $API
-       user: $USER
-       password: $PASSWORD
-       org: $ORG
-       space: $SPACE
-       appname: wercker-pipeline
-       docker_image: mrbluedot/pipeline
