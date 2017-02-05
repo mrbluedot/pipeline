@@ -6,10 +6,6 @@ dev:
         package-dir: github.com/mrbluedot/pipeline
 
     - script:
-        name: env
-        code: env
-
-    - script:
         name: go get
         code: |
           cd $WERCKER_SOURCE_DIR
@@ -26,10 +22,6 @@ build:
   steps:
     - setup-go-workspace:
         package-dir: github.com/mrbluedot/pipeline
-
-    - script:
-        name: env
-        code: env
 
     - script:
         name: go get
